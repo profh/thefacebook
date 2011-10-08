@@ -1,0 +1,4 @@
+INSERT INTO users
+  (email, name, status, password, member_since)
+VALUES 
+  ("zuck@harvard.edu","Student","facebook",CURDATE())";
