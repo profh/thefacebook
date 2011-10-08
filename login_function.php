@@ -2,13 +2,13 @@
   // Connects to your Database 
 	include("db_connect.php");	  
   mysql_connect($dbhost, $dbuser, $dbpass) or die(mysql_error());
-  mysql_select_db($database) or die(mysql_error());
+  mysql_select_db($dbname) or die(mysql_error());
   //Checks if there is a login cookie
-  if(isset($_COOKIE['ID_my_site']))
+  if(isset($_COOKIE['id_my_site']))
   {  
   //if there is, it logs you in and directes you to the members page
-    $email = $_COOKIE['ID_my_site'];
-    $pass = $_COOKIE['Key_my_site'];
+    $email = $_COOKIE['id_my_site'];
+    $pass = $_COOKIE['key_my_site'];
   		$query = "SELECT * FROM users WHERE email = '$email' AND password = '$pass'";
   		echo $query;
     $check = mysql_query($query)or die(mysql_error());
@@ -54,9 +54,9 @@
       // if login is ok then we add a cookie 
       $_POST['email'] = stripslashes($_POST['email']);
       $hour = time() + 3600;  //Cookie timeout of 1 hour
-      setcookie(ID_my_site, $_POST['email'], $hour);
-      setcookie(Key_my_site, $_POST['pass'], $hour);
-      setcookie(current_user_id, $info['id'], $hour);
+      setcookie("id_my_site", $_POST['email'], $hour);
+      setcookie("key_my_site", $_POST['pass'], $hour);
+      setcookie("current_user_id", $info['id'], $hour);
    
       //then redirect them to the members area 
       header("Location: profile.php?uid=" . $info['id']);
