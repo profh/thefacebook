@@ -1,5 +1,4 @@
-<div id = "footer">
-
+<div id="footer">
  <p>
    <a href="about_us.php">about</a> &nbsp;
    <a href="contact.php">contact</a> &nbsp;
@@ -9,7 +8,6 @@
    <br />
    a Mark Zuckerberg production
    <br />
-   Thefacebook &copy; 2004 
+   Thefacebook &copy; 2004
  </p>
 </div>
-

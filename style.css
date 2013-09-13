@@ -1,5 +1,5 @@
 body {
-  margin-top: 0px; 
+  margin-top: 0px;
   font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
   font-size: 12px;
 }
@@ -55,7 +55,7 @@ body {
   min-height: 140px;
   margin: 2px;
   width: 160px;
-  padding: 1px; 
+  padding: 1px;
   text-align: center;
 }
 
@@ -92,7 +92,7 @@ body {
 
 #footer a:hover {
   text-decoration: underline;
-  color: #77C9F3; 
+  color: #77C9F3;
 }
 
 #side_panel {
@@ -188,9 +188,9 @@ body {
 
 #preferences_box a {
   text-decoration: none;
-  color: #68A0E0; 
+  color: #68A0E0;
 }
-  
+
 #preferences_box a:hover {
   color: #77C9F3;
   text-decoration: underline;
@@ -233,16 +233,16 @@ body {
 }
 
 #the_project_box {
-  border: 1px solid #4C70A0; 
-  width: 750px; 
+  border: 1px solid #4C70A0;
+  width: 750px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
 }
 
 #the_people_box {
-  border: 1px solid #4C70A0; 
-  width: 750px; 
+  border: 1px solid #4C70A0;
+  width: 750px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -517,7 +517,10 @@ body {
   text-decoration: underline;
 }
 
-#fb_button input {
+#fb_button input, #fb_button a {
+  text-decoration: none;
+  cursor: default;
+  padding: 2px 10px 2px 10px;
   background-color: #538ADC;
   border-width: 1px 2px 2px 1px;
   border-style: solid;
@@ -527,18 +530,5 @@ body {
   font-family: Tahoma, arial;
   margin-top: 1px;
   text-align: center;
-  width: auto; 
-}
-
-#fb_button input:focus {
-  background-color: #538ADC;
-  border-width: 1px 2px 2px 1px;
-  border-style: solid;
-  border-color: #D9DFEA #3B5998 #3B5998 #D9DFEA;
-  color: white;
-  font-size: 12px;
-  font-family: Tahoma, arial;
-  margin-top: 1px;
-  text-align: center;
-  width: auto; 
+  width: auto;
 }

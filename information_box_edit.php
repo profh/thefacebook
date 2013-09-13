@@ -14,7 +14,6 @@
 
   $info = mysql_fetch_array($query);
 ?>
-
 <div id="information_box">
 <div style="background-color: #4C70A0; color: white">
 <table style="border-collapse: collapse; width: 100%;">
@@ -37,7 +36,7 @@
     </tr>
 </table>
 <form action="<?php echo $_SERVER['PHP_SELF'];?>" method ="post">
-  <table>  
+  <table>
     <th>Basic Info:</th>
       <tr>
        <td>Email:</td>
@@ -45,13 +44,13 @@
       </tr>
       <tr>
        <td>Status:</td>
-       <td> 
-        <select name ="status">
-          <option value = "<?php echo $info['status'] ?>"> <?php echo $info['status'] ?> </option>
-          <option value = "Student"> Student </option>
-          <option value = "Alumnus"> Alumnus/Alumna</option>
-          <option value = "Faculty"> Faculty</option>
-          <option value = "Staff"> Staff</option>
+       <td>
+        <select name="status">
+          <option value="<?php echo $info['status'] ?>"><?php echo $info['status'] ?></option>
+          <option value="Student">Student </option>
+          <option value="Alumnus">Alumnus/Alumna</option>
+          <option value="Faculty">Faculty</option>
+          <option value="Staff">Staff</option>
         </select>
       </td>
       </tr>
@@ -59,17 +58,17 @@
        <td>Sex:</td>
        <td>
         <select name="sex">
-          <option value="<?php echo $info['sex'] ?>"> <?php echo $info['sex'] ?> </option>
-          <option value="Male"> Male </option>
-          <option value="Female"> Female </option>
-          <option value="Other"> Other </option>
+          <option value="<?php echo $info['sex'] ?>"><?php echo $info['sex'] ?></option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Couple">Couple</option>
         </select>
       </tr>
       <tr>
        <td>Year:</td>
        <td>
         <select name="year">
-        <option value="<?php echo $info['year'] ?>"> <?php echo $info['year'] ?> </option>
+        <option value="<?php echo $info['year'] ?>"><?php echo $info['year'] ?></option>
         <option value="2016">2016</option>
         <option value="2016">2016</option>
         <option value="2015">2015</option>
@@ -98,7 +97,7 @@
       </tr>
   </table>
   <table>
-   <th>Extended Info:</th>   
+   <th>Extended Info:</th>
       <tr>
        <td>Screenname:</td>
        <td><input type="text" name="screenname" value="<?php echo $info['screenname'] ?>" /></td>
@@ -111,10 +110,10 @@
        <td>Interested In:</td>
        <td>
           <select name="interested_in">
-            <option value="<?php echo $info['interested_in'] ?>"> <?php echo $info['interested_in'] ?></option>
+            <option value="<?php echo $info['interested_in'] ?>"><?php echo $info['interested_in'] ?></option>
             <option value="Women">Women</option>
             <option value="Men">Men</option>
-            <option value="Other">Other</option>
+            <option value="Couple">Couple</option>
           </select>
       </td>
       </tr>
@@ -122,11 +121,11 @@
        <td>Relationship Status:</td>
        <td>
           <select name="relationship">
-            <option value="<?php echo $info['relationship'] ?>"> <?php echo $info['relationship'] ?></option>
-            <option value="Single"> Single</option>
-            <option value="In a relationship"> In a Relationship</option>
-            <option value="Married"> Married</option>
-            <option value="It's Complicated"> It's Complicated </option>
+            <option value="<?php echo $info['relationship'] ?>"><?php echo $info['relationship'] ?></option>
+            <option value="Single">Single</option>
+            <option value="In a relationship">In a Relationship</option>
+            <option value="Married">Married</option>
+            <option value="It's Complicated">It's Complicated</option>
           </select>
       </td>
       </tr>
@@ -134,11 +133,11 @@
        <td>Political Views:</td>
        <td>
           <select name="political_view">
-            <option value="<?php echo $info['political_view'] ?>"> <?php echo $info['political_view'] ?></option>
-            <option value="Liberal"> Liberal</option>
-            <option value="Conservative"> Conservative</option>
-            <option value="Moderate"> Moderate</option>
-						<option value="Libertarian"> Libertarian</option>
+            <option value="<?php echo $info['political_view'] ?>"><?php echo $info['political_view'] ?></option>
+            <option value="Liberal">Liberal</option>
+            <option value="Conservative">Conservative</option>
+            <option value="Moderate">Moderate</option>
+                        <option value="Libertarian">Libertarian</option>
           </select>
         </td>
       </tr>
@@ -147,10 +146,6 @@
        <td><input type="text" name="interests" value="<?php echo $info['interests'] ?>" /></td>
       </tr>
   </table>
-  <div id ="fb_button" style="text-align: center;"> <input type="submit" name="submit" value="Update Profile" /></div>
+  <div id="fb_button" style="text-align: center;"> <input type="submit" name="submit" value="Update Profile" /></div>
   </form>
 </div>
-
-
-
-

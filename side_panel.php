@@ -1,18 +1,10 @@
+<div id="side_panel">
+
 <?php
-
-echo '<div id="side_panel">';
-
-if(isset($_GET['uid']))
-{
-  $user_id = $_GET['uid'];
-}
-else
-{
-  $user_id = $_COOKIE['current_user_id'];
-}
+$user_id  = (!empty($_GET['uid'])) ? $_GET['uid'] : $_COOKIE['current_user_id'];
 
 echo "
-<div id = \"side_links\"> 
+<div id=\"side_links\">
 
 <a href=\"profile.php?uid=$user_id\"> My Profile </a> <a href=\"profile.php?uid=$user_id&edit=true\"> [ edit ] </a><br />
 <a href=\"construction.php\"> My Groups </a> <br />
@@ -23,13 +15,7 @@ echo "
 <a href=\"construction.php\"> My Account </a> <br />
 <a href=\"construction.php\"> My Privacy </a> <br />
 
-
-
-</div>
-
-";
-
-echo '</div>';
-
+</div>";
 ?>
 
+</div>
