@@ -1,10 +1,10 @@
 <?php
-	// If the user is revising information, process it
+  // If the user is revising information, process it
   if (isset($_POST['submit']))
   {
     $update = "
-    UPDATE users 
-    SET 
+    UPDATE users
+    SET
       status = '".$_POST['status']."',
       sex = '".$_POST['sex']."',
       year = '".$_POST['year']."',
@@ -18,16 +18,14 @@
     WHERE id = $user_id";
     $update_member = mysql_query($update);
 
-		// reset values in info hash
-		$qtext = "SELECT * FROM users WHERE id = $user_id";
-		$query = mysql_query($qtext) or die(mysql_error());
-		$info = mysql_fetch_array($query);
+        // reset values in info hash
+        $qtext = "SELECT * FROM users WHERE id = $user_id";
+        $query = mysql_query($qtext) or die(mysql_error());
+        $info = mysql_fetch_array($query);
   }
-	else {
-		include("quick_data.php");
-	}
-
-
+  else {
+        include("quick_data.php");
+  }
 ?>
 <div id="information_box">
 <div style="background-color: #4C70A0; color: white">
@@ -35,10 +33,10 @@
   <tr>
    <td>Information</td>
    <?php
-    if ($user_id == $_COOKIE['current_user_id'])
+    if (isset($_COOKIE['current_user_id']) && $user_id == $_COOKIE['current_user_id'])
     {
       ?>
-       <td id ="fb_link" style="text-align: right;">
+       <td id="fb_link" style="text-align: right;">
          <a href="profile.php?uid=<?php echo "$user_id";?>&edit=true"> [ edit ] </a></td>
       <?php
     }
@@ -64,7 +62,7 @@
      <td><?php echo $better_time; ?></td>
     </tr>
 </table>
-<table>  
+<table>
   <th>Basic Info:</th>
     <tr>
      <td>Email:</td>
@@ -89,7 +87,7 @@
     </tr>
 </table>
 <table>
- <th>Extended Info:</th>   
+ <th>Extended Info:</th>
     <tr>
      <td>Screenname:</td>
      <td><?php echo $info['screenname'] ?></td>
@@ -116,7 +114,3 @@
     </tr>
 </table>
 </div>
-
-
-
-

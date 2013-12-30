@@ -1,14 +1,11 @@
-<?php
-	include 'head_data.php';
-?>
-
+<?php include 'head_data.php'; ?>
  <body>
-<?php
-	echo '<div id ="content">';
-		include 'header.php';
-	  include 'privacy_box.php';
-	  include 'footer.php';
-	echo '</div>';
-?>
+  <div id="content">
+    <?php
+      include 'header.php';
+      include 'privacy_box.php';
+      include 'footer.php';
+    ?>
+  </div>
   </body>
 </html>
